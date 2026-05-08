@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="/favicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>sylviameo.ws</title>
+  <meta content="sylviameo.ws" property="og:title" />
+  <meta content="Hai! I'm sylviameows, also known by Vae. My main passion is programming, where I mainly work on random little side-projects. Most of my experience is in Minecraft Server/Plugin development with some miscellaneous experience in modding, discord bot development, and more!" property="og:description" />
+  <meta content="https://sylviameo.ws/" property="og:url" />
+  <meta content="https://sylviameo.ws/favicon.png" property="og:image" />
+  <meta content="#f7cdf8" name="theme-color" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self'; base-uri 'self'; form-action 'self'" />
+  <link rel="stylesheet" href="/css/styles.css" />
+  {% if pageStyles %}<style>{{ pageStyles | safe }}</style>{% endif %}
+  <script src="/js/main.js" defer></script>
+</head>
+<body>
+  <nav id="navigation">
+    <a href="/" class="home">sylviameo.ws</a>
+    <button>=</button>
+    <div style="transform: scale(0);" class="menu">
+      <a href="/projects/jester/" class="home">jester</a>
+      <a href="/projects/arcator/" class="home">arcator</a>
+      <a href="/projects/amayi/" class="home">amayi</a>
+      <a href="/projects/flask/" class="home">flask</a>
+    </div>
+  </nav>
+
+  {% if parallax %}
+  {% if errorPage %}
+  <div class="error">
+    <div>
+      <h1 class="error">404</h1>
+      <p class="error">Not Found</p>
+    </div>
+  </div>
+  {% endif %}
+  <div style="display: flex; width: 100%; justify-content: center;">
+    <button class="scroll">
+      <p>continue</p>
+      <p class="bobbing">v</p>
+    </button>
+  </div>
+  <div id="parallax">
+    <div class="sky smooth"></div>
+    <div class="far_clouds smooth"></div>
+    <div class="near_clouds smooth"></div>
+    <div class="far_mountains smooth"></div>
+    <div class="near_mountains smooth"></div>
+    <div class="trees smooth">
+      <div id="page">
+        {{ content | safe }}
+      </div>
+    </div>
+  </div>
+  {% else %}
+  {{ content | safe }}
+  {% endif %}
+</body>
+</html>

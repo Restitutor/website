@@ -1,0 +1,39 @@
+---
+layout: base.njk
+parallax: true
+errorPage: true
+permalink: 404.html
+pageStyles: |
+  div.error {
+    z-index: -1;
+    display: flex;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+
+    background: radial-gradient(#2C2546, rgba(0,0,0,0) 25%);
+  }
+
+  div.error * {
+    margin: auto;
+  }
+
+  h1.error {
+    font-size: 5em;
+    text-align: center;
+  }
+
+  p.error {
+    font-size: 2em;
+    text-align: center;
+  }
+
+  a {
+    color: beige;
+  }
+---
+<div class="holder">
+  <div class="container">
+    <h1>Sorry we had an issue loading this page, if you believe this is an error report it in the <a href="https://discord.gg/EvKY9QFDn5" target="_blank" rel="noopener noreferrer">Discord</a>!</h1>
+  </div>
+</div>
